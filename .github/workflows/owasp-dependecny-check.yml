@@ -41,7 +41,7 @@ jobs:
         project: 'owasp-dependency-check-github-actions'
         path: '.'
         format: 'HTML'
-        out: 'reports' # this is the default, no need to specify unless you wish to override it
+        # out: 'reports' # this is the default, no need to specify unless you wish to override it
         args: >
           --failOnCVSS 7
           --enableRetired
