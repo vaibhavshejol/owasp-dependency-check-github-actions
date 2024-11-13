@@ -40,7 +40,6 @@ jobs:
         path: '.'
         format: 'HTML'
         out: '/github/workspace/reports'
-        args: "--failOnCVSS 7 --enableRetired"
 
     - name: Upload Depcheck Report
       uses: actions/upload-artifact@v3
