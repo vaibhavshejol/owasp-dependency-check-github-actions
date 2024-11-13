@@ -41,6 +41,13 @@ jobs:
         format: 'HTML'
         out: '/github/workspace/reports'
 
+    - name: List files in reports directory
+      run: ls -R ${{ github.workspace }}/reports
+
+    - name: Ensure permissions for the report file
+      run: chmod 644 ${{ github.workspace }}/reports/dependency-check-report.html
+
+
     - name: Upload Depcheck Report
       uses: actions/upload-artifact@v3
       with:
