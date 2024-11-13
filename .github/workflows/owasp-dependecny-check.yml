@@ -41,6 +41,10 @@ jobs:
         path: '.'
         format: 'HTML'
         out: 'reports'
+        args: "--failOnCVSS 7 --enableRetired"
+        # args: >
+        #     --failOnCVSS 7
+        #     --enableRetired
 
     # - name: Ensure permissions for the report file
     #   run: chmod 644 ${{ github.workspace }}/reports/dependency-check-report.html
