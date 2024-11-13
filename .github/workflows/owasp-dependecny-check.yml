@@ -39,7 +39,7 @@ jobs:
         project: 'owasp-dependency-check-github-actions'
         path: '.'
         format: 'HTML'
-        out: '/github/workspace/reports'
+        out: 'reports'
 
     - name: Ensure permissions for the report file
       run: chmod 644 ${{ github.workspace }}/reports/dependency-check-report.html
