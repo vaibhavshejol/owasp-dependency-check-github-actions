@@ -39,11 +39,12 @@ jobs:
         project: 'owasp-dependency-check-github-actions'
         path: '.'
         format: 'HTML'
-        out: 'reports'  # Change path to Spring Boot build folder
+        out: 'reports'
         args: "--failOnCVSS 7 --enableRetired"
 
     - name: Upload Depcheck Report
       uses: actions/upload-artifact@v3
       with:
          name: Depcheck report
+        #  path: ${{github.workspace}}/reports/dependency-check-report.html
          path: reports/dependency-check-report.html
